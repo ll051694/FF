@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Two-Column Layout Example</title>
+    <style>
+        .container {
+            
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-column {
+            flex-basis: 70%;
+            padding-right: 20px;
+            box-sizing: border-box;
+
+        }
+        .right-column {
+            flex-basis: 40%;
+            box-sizing: border-box;
+        }
+
+        .school-data{
+            background-color: hotpink;
+
+        }
+
+        .subject-data{
+            background-color: gray;
+            width: 200px;
+            display: inline-block;
+
+        }
+
+        .teacher-data{
+            background-color: purple;
+            display: block;
+        }
+
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-column,
+            .right-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+          <div class="school-data">
+            <h1>劉家享</h1>
+            <p >笑死</p>
+          </div>
+            
+          <div class="subject-data">
+              <h1>劉家享</h1>
+            <p>錯號是小胖</p>
+          </div>
+            
+          <div class="teacher-data">
+              <h1>物理教師</h1>
+            <p>姓名:林仟弘</p>
+          </div>
+            
+        
+        </div>
+        <div class="right-column">
+            <h3>聯絡方式</h3>
+            <p>520520520 </p>
+            
+        </div>
+    </div>
+</body>
+
+</html>
